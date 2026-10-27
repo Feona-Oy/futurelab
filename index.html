@@ -1836,13 +1836,12 @@
     try {
       const savedLanguage = localStorage.getItem(storageKey);
 
-      if (savedLanguage === "ru" || savedLanguage === "en") {
+      if (savedLanguage === "en" || savedLanguage === "ru") {
         initialLanguage = savedLanguage;
       }
     } catch {
-      // Если хранилище недоступно, используем русский язык.
+      // Если хранилище недоступно, используем английский язык.
     }
-
     setLanguage(initialLanguage, false);
   </script>
 </body>
