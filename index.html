@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Future Career Lab — Explore Your Direction</title>
+  <title>Future Career Lab — Найди своё направление</title>
   <meta
     name="description"
-    content="Practical career experiences for teenagers. Explore different fields, learn from professionals, and take your next step with more confidence."
+    content="Практическое знакомство с профессиями для подростков. Изучайте разные сферы, учитесь у профессионалов и делайте следующий шаг с большей уверенностью."
   >
   <meta name="theme-color" content="#fffdfa">
 
@@ -160,7 +160,7 @@
       border-color: var(--primary);
     }
 
-    /* Header */
+    /* Шапка сайта */
 
     .site-header {
       position: sticky;
@@ -176,7 +176,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .logo {
@@ -186,10 +186,38 @@
       white-space: nowrap;
     }
 
+    .header-content > .logo {
+      margin-right: auto;
+    }
+
+    .language-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 8px 12px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .language-button:hover {
+      background: var(--blue-light);
+      border-color: var(--primary);
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
     }
 
     .nav-links a:not(.btn) {
@@ -209,6 +237,7 @@
       display: none;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       width: 44px;
       height: 44px;
       padding: 10px;
@@ -231,7 +260,7 @@
       background: var(--text);
     }
 
-    /* Hero */
+    /* Первый экран */
 
     .hero {
       padding: 76px 0 88px;
@@ -266,6 +295,7 @@
       font-size: clamp(2.5rem, 4.5vw, 4rem);
       line-height: 1.12;
       letter-spacing: -0.055em;
+      overflow-wrap: break-word;
     }
 
     .hero-description {
@@ -303,7 +333,7 @@
       border-radius: 44% 44% 18px 18px;
     }
 
-    /* Subject strip */
+    /* Полоса направлений */
 
     .subject-strip {
       padding: 21px 0;
@@ -322,7 +352,7 @@
       letter-spacing: 0.025em;
     }
 
-    /* Shared sections */
+    /* Общие стили разделов */
 
     .section-title {
       max-width: 780px;
@@ -388,7 +418,7 @@
       color: var(--muted);
     }
 
-    /* How it works */
+    /* Как это работает */
 
     .how-section {
       background: var(--soft);
@@ -398,6 +428,7 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
+      list-style: none;
     }
 
     .step-card {
@@ -427,7 +458,7 @@
       line-height: 1.4;
     }
 
-    /* Professionals */
+    /* Профессионалы */
 
     .experts-section {
       padding-bottom: 0;
@@ -473,7 +504,7 @@
       line-height: 1.8;
     }
 
-    /* Audience */
+    /* Подросткам и родителям */
 
     .audience-grid {
       display: grid;
@@ -518,7 +549,7 @@
       font-weight: 500;
     }
 
-    /* Enquiry */
+    /* Форма обращения */
 
     .signup-section {
       padding-top: 16px;
@@ -618,7 +649,7 @@
       color: var(--text);
     }
 
-    /* FAQ */
+    /* Частые вопросы */
 
     .faq-section {
       background: var(--soft);
@@ -676,7 +707,7 @@
       line-height: 1.8;
     }
 
-    /* Footer */
+    /* Подвал сайта */
 
     .site-footer {
       padding: 48px 0 28px;
@@ -721,7 +752,7 @@
       font-size: 0.8rem;
     }
 
-    /* Tablet */
+    /* Планшеты */
 
     @media (max-width: 1024px) {
       .hero-grid {
@@ -747,29 +778,25 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .header-content {
+        gap: 14px;
+      }
+
       .nav-links {
-        gap: 18px;
+        gap: 12px;
       }
     }
 
-    /* Mobile */
+    /* Мобильная навигация */
 
-    @media (max-width: 768px) {
-      .container {
-        padding-inline: 22px;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
+    @media (max-width: 900px) {
       .site-header {
         padding: 12px 0;
       }
 
       .header-content {
         flex-wrap: wrap;
-        gap: 0;
+        gap: 12px;
       }
 
       .menu-button {
@@ -782,7 +809,7 @@
         align-items: stretch;
         width: 100%;
         gap: 4px;
-        padding-top: 18px;
+        padding-top: 6px;
       }
 
       .nav-links.is-open {
@@ -795,6 +822,18 @@
 
       .nav-links .btn {
         margin-top: 8px;
+      }
+    }
+
+    /* Мобильные устройства */
+
+    @media (max-width: 768px) {
+      .container {
+        padding-inline: 22px;
+      }
+
+      section {
+        padding: 60px 0;
       }
 
       .hero {
@@ -852,6 +891,10 @@
     }
 
     @media (max-width: 380px) {
+      .header-content {
+        gap: 8px;
+      }
+
       .hero-buttons {
         flex-direction: column;
       }
@@ -881,19 +924,38 @@
 </head>
 
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+  <a
+    href="#main"
+    class="skip-link"
+    data-en="Skip to content"
+  >Перейти к содержимому</a>
 
   <header class="site-header">
     <div class="container header-content">
-      <a href="#" class="logo" aria-label="Future Career Lab home">
+      <a
+        href="#"
+        class="logo"
+        aria-label="Future Career Lab — главная"
+        data-en-aria-label="Future Career Lab home"
+      >
         Future Career Lab
       </a>
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        lang="en"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
 
       <button
         class="menu-button"
         id="menuButton"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Открыть меню"
         aria-controls="mainNavigation"
         aria-expanded="false"
       >
@@ -907,58 +969,74 @@
       <nav
         class="nav-links"
         id="mainNavigation"
-        aria-label="Main navigation"
+        aria-label="Основная навигация"
+        data-en-aria-label="Main navigation"
       >
-        <a href="#programs">Programs</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#experts">Our approach</a>
-        <a href="#faq">FAQ</a>
-        <a href="#signup" class="btn btn-primary">
-          Enquire
-        </a>
+        <a href="#programs" data-en="Programs">Программы</a>
+        <a href="#how-it-works" data-en="How it works">Как это работает</a>
+        <a href="#experts" data-en="Our approach">Наш подход</a>
+        <a href="#faq" data-en="FAQ">Вопросы</a>
+        <a
+          href="#signup"
+          class="btn btn-primary"
+          data-en="Enquire"
+        >Оставить заявку</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- Первый экран -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-text">
-          <span class="eyebrow">
-            A thoughtful start to the future
-          </span>
+          <span
+            class="eyebrow"
+            data-en="A thoughtful start to the future"
+          >Осознанный шаг в будущее</span>
 
           <h1 id="hero-title">
-            Explore possibilities.<br>
-            Find your own direction.
+            <span data-en="Explore possibilities.">Открой возможности.</span><br>
+            <span data-en="Find your own direction.">Найди своё направление.</span>
           </h1>
 
-          <p class="hero-description">
-            Practical career experiences for teenagers, guided by
-            industry professionals. Discover new interests, try
-            meaningful tasks, and take the next step with more confidence.
+          <p
+            class="hero-description"
+            data-en="Practical career experiences for teenagers, guided by industry professionals. Discover new interests, try meaningful tasks, and take the next step with more confidence."
+          >
+            Практическое знакомство с профессиями для подростков
+            под руководством специалистов. Открывай новые интересы,
+            пробуй реальные задачи и делай следующий шаг
+            с большей уверенностью.
           </p>
 
           <div class="hero-buttons">
-            <a href="#programs" class="btn btn-primary">
-              Explore programs
-            </a>
+            <a
+              href="#programs"
+              class="btn btn-primary"
+              data-en="Explore programs"
+            >Посмотреть программы</a>
 
-            <a href="#signup" class="btn btn-outline">
-              Ask about a trial
-            </a>
+            <a
+              href="#signup"
+              class="btn btn-outline"
+              data-en="Ask about a trial"
+            >Узнать о пробном занятии</a>
           </div>
 
-          <p class="hero-note">
-            Room to explore. No need to have it all figured out.
+          <p
+            class="hero-note"
+            data-en="Room to explore. No need to have it all figured out."
+          >
+            Здесь можно пробовать. Необязательно знать все ответы заранее.
           </p>
         </div>
 
         <div class="hero-image">
           <img
             src="src/person.png"
-            alt="Illustration of a young person holding a creative portfolio"
+            alt="Иллюстрация: молодой человек с творческим портфолио в руках"
+            data-en-alt="Illustration of a young person holding a creative portfolio"
             width="473"
             height="477"
             fetchpriority="high"
@@ -967,133 +1045,186 @@
       </div>
     </section>
 
-    <!-- Career areas -->
+    <!-- Профессиональные направления -->
     <div class="subject-strip">
       <div class="container">
-        <ul class="subject-list" aria-label="Career areas and learning approach">
-          <li>Technology</li>
-          <li>Engineering</li>
-          <li>Design</li>
-          <li>Marketing</li>
-          <li>Practical projects</li>
-          <li>Professional guidance</li>
+        <ul
+          class="subject-list"
+          aria-label="Профессиональные направления и подход к обучению"
+          data-en-aria-label="Career areas and learning approach"
+        >
+          <li data-en="Technology">Технологии</li>
+          <li data-en="Engineering">Инженерия</li>
+          <li data-en="Design">Дизайн</li>
+          <li data-en="Marketing">Маркетинг</li>
+          <li data-en="Practical projects">Практические проекты</li>
+          <li data-en="Professional guidance">Поддержка профессионалов</li>
         </ul>
       </div>
     </div>
 
-    <!-- Programs -->
+    <!-- Программы -->
     <section id="programs" aria-labelledby="programs-title">
       <div class="container">
-        <span class="eyebrow">Explore through experience</span>
+        <span
+          class="eyebrow"
+          data-en="Explore through experience"
+        >Познавай через опыт</span>
 
         <h2 class="section-title" id="programs-title">
-          A little experience.<br>
-          A clearer direction.
+          <span data-en="A little experience.">Немного опыта.</span><br>
+          <span data-en="A clearer direction.">Больше ясности.</span>
         </h2>
 
-        <p class="section-subtitle">
-          Explore different fields through practical tasks and discover
-          what you would like to learn more about.
+        <p
+          class="section-subtitle"
+          data-en="Explore different fields through practical tasks and discover what you would like to learn more about."
+        >
+          Знакомься с разными сферами через практические задания
+          и находи то, о чём хочется узнать больше.
         </p>
 
         <div class="grid-3">
           <article class="card">
-            <h3>Try a professional role</h3>
-            <p>
-              Move beyond job descriptions. Try practical tasks,
-              explore how a professional thinks, and see what
-              interests you along the way.
+            <h3 data-en="Try a professional role">
+              Попробуй себя в профессии
+            </h3>
+            <p
+              data-en="Move beyond job descriptions. Try practical tasks, explore how a professional thinks, and see what interests you along the way."
+            >
+              Не ограничивайся описаниями профессий. Выполняй
+              практические задания, узнавай, как мыслит специалист,
+              и замечай, что увлекает именно тебя.
             </p>
           </article>
 
           <article class="card">
-            <h3>Make an informed choice</h3>
-            <p>
-              Give future study decisions a practical starting point.
-              Reflect on what you enjoyed, what challenged you,
-              and what you would like to explore next.
+            <h3 data-en="Make an informed choice">
+              Сделай осознанный выбор
+            </h3>
+            <p
+              data-en="Give future study decisions a practical starting point. Reflect on what you enjoyed, what challenged you, and what you would like to explore next."
+            >
+              Опирайся на реальный опыт при выборе дальнейшего
+              обучения. Подумай, что тебе понравилось, что оказалось
+              сложным и что хотелось бы попробовать дальше.
             </p>
           </article>
 
           <article class="card">
-            <h3>Discover different possibilities</h3>
-            <p>
-              Compare different ways of working, from technical
-              problem-solving to creative thinking. You do not
-              need to choose just one interest.
+            <h3 data-en="Discover different possibilities">
+              Открой разные возможности
+            </h3>
+            <p
+              data-en="Compare different ways of working, from technical problem-solving to creative thinking. You do not need to choose just one interest."
+            >
+              Сравнивай разные подходы к работе: от решения
+              технических задач до творческого поиска.
+              Необязательно ограничиваться одним интересом.
             </p>
           </article>
         </div>
 
-        <ul class="chips" aria-label="Program fields">
-          <li class="chip">Technology</li>
-          <li class="chip">Engineering</li>
-          <li class="chip">Design</li>
-          <li class="chip">Marketing</li>
-          <li class="chip chip-dashed">More to explore</li>
+        <ul
+          class="chips"
+          aria-label="Направления программ"
+          data-en-aria-label="Program fields"
+        >
+          <li class="chip" data-en="Technology">Технологии</li>
+          <li class="chip" data-en="Engineering">Инженерия</li>
+          <li class="chip" data-en="Design">Дизайн</li>
+          <li class="chip" data-en="Marketing">Маркетинг</li>
+          <li
+            class="chip chip-dashed"
+            data-en="More to explore"
+          >И другие направления</li>
         </ul>
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- Как это работает -->
     <section
       class="how-section"
       id="how-it-works"
       aria-labelledby="how-title"
     >
       <div class="container">
-        <span class="eyebrow">One step at a time</span>
+        <span
+          class="eyebrow"
+          data-en="One step at a time"
+        >Шаг за шагом</span>
 
-        <h2 class="section-title" id="how-title">
-          A simple way to get started
+        <h2
+          class="section-title"
+          id="how-title"
+          data-en="A simple way to get started"
+        >
+          Начать проще, чем кажется
         </h2>
 
-        <p class="section-subtitle">
-          From choosing an area to reflecting on what you enjoyed—
-          one step at a time.
+        <p
+          class="section-subtitle"
+          data-en="From choosing an area to reflecting on what you enjoyed—one step at a time."
+        >
+          От выбора направления до понимания того, что понравилось, —
+          постепенно, шаг за шагом.
         </p>
 
         <ol class="steps-grid">
           <li class="step-card">
             <span class="step-number" aria-hidden="true">1</span>
-            <h3>Choose an area</h3>
-            <p>
-              Tell us what interests you, or ask for help
-              finding a starting point.
+            <h3 data-en="Choose an area">Выбери направление</h3>
+            <p
+              data-en="Tell us what interests you, or ask for help finding a starting point."
+            >
+              Расскажи, что тебе интересно, или попроси
+              помочь определиться, с чего начать.
             </p>
           </li>
 
           <li class="step-card">
             <span class="step-number" aria-hidden="true">2</span>
-            <h3>Meet a professional</h3>
-            <p>
-              Get an introduction to the field, the task,
-              and the thinking behind the work.
+            <h3 data-en="Meet a professional">
+              Познакомься с профессионалом
+            </h3>
+            <p
+              data-en="Get an introduction to the field, the task, and the thinking behind the work."
+            >
+              Узнай больше о сфере, предстоящем задании
+              и подходе специалиста к работе.
             </p>
           </li>
 
           <li class="step-card">
             <span class="step-number" aria-hidden="true">3</span>
-            <h3>Try a practical task</h3>
-            <p>
-              Work through a challenge, ask questions,
-              and experiment with your own ideas.
+            <h3 data-en="Try a practical task">
+              Выполни практическое задание
+            </h3>
+            <p
+              data-en="Work through a challenge, ask questions, and experiment with your own ideas."
+            >
+              Попробуй решить задачу, задавай вопросы
+              и экспериментируй с собственными идеями.
             </p>
           </li>
 
           <li class="step-card">
             <span class="step-number" aria-hidden="true">4</span>
-            <h3>Reflect and explore</h3>
-            <p>
-              Discuss your experience, receive feedback,
-              and consider what to try next.
+            <h3 data-en="Reflect and explore">
+              Осмысли опыт и двигайся дальше
+            </h3>
+            <p
+              data-en="Discuss your experience, receive feedback, and consider what to try next."
+            >
+              Обсуди свои впечатления, получи обратную связь
+              и подумай, что попробовать в следующий раз.
             </p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- Professionals -->
+    <!-- Профессионалы -->
     <section
       class="experts-section"
       id="experts"
@@ -1101,33 +1232,52 @@
     >
       <div class="container">
         <div class="experts-panel">
-          <span class="badge">Learning through experience</span>
+          <span
+            class="badge"
+            data-en="Learning through experience"
+          >Обучение через опыт</span>
 
-          <h2 class="section-title" id="experts-title">
-            Meet the people behind the professions
+          <h2
+            class="section-title"
+            id="experts-title"
+            data-en="Meet the people behind the professions"
+          >
+            Познакомься с людьми, которые стоят за профессиями
           </h2>
 
-          <p class="section-subtitle">
-            Learn how professionals approach their work, ask questions,
-            and discover what a role looks like beyond the job title.
+          <p
+            class="section-subtitle"
+            data-en="Learn how professionals approach their work, ask questions, and discover what a role looks like beyond the job title."
+          >
+            Узнавай, как специалисты подходят к своей работе,
+            задавай вопросы и открывай то, что скрывается
+            за названием профессии.
           </p>
 
           <div class="grid-2">
             <article class="expert-feature">
-              <h3>Guidance from professionals</h3>
-              <p>
-                Learn from people working in their fields.
-                Hear about their everyday decisions, the skills
-                they use, and what they find rewarding.
+              <h3 data-en="Guidance from professionals">
+                Поддержка профессионалов
+              </h3>
+              <p
+                data-en="Learn from people working in their fields. Hear about their everyday decisions, the skills they use, and what they find rewarding."
+              >
+                Учись у людей, которые работают в своей сфере.
+                Узнавай, какие решения они принимают каждый день,
+                какие навыки используют и что приносит им
+                удовлетворение в работе.
               </p>
             </article>
 
             <article class="expert-feature">
-              <h3>Practical challenges</h3>
-              <p>
-                Explore tasks connected to professional work.
-                Focus on the process: understanding a brief,
-                developing an idea, and explaining your choices.
+              <h3 data-en="Practical challenges">Практические задачи</h3>
+              <p
+                data-en="Explore tasks connected to professional work. Focus on the process: understanding a brief, developing an idea, and explaining your choices."
+              >
+                Пробуй задания, связанные с реальной работой
+                специалистов. Сосредоточься на процессе:
+                понять задачу, развить идею и объяснить
+                свои решения.
               </p>
             </article>
           </div>
@@ -1135,45 +1285,80 @@
       </div>
     </section>
 
-    <!-- Students and parents -->
+    <!-- Подросткам и родителям -->
     <section aria-labelledby="audience-title">
       <div class="container">
-        <span class="eyebrow">For teenagers and their families</span>
+        <span
+          class="eyebrow"
+          data-en="For teenagers and their families"
+        >Для подростков и их семей</span>
 
-        <h2 class="section-title" id="audience-title">
-          Space to explore. Support to move forward.
+        <h2
+          class="section-title"
+          id="audience-title"
+          data-en="Space to explore. Support to move forward."
+        >
+          Свобода пробовать. Поддержка, чтобы двигаться вперёд.
         </h2>
 
-        <p class="section-subtitle">
-          A starting point for teenagers discovering their interests,
-          and parents who want to support the process.
+        <p
+          class="section-subtitle"
+          data-en="A starting point for teenagers discovering their interests, and parents who want to support the process."
+        >
+          Отправная точка для подростков, которые ищут свои интересы,
+          и родителей, которые хотят поддержать их на этом пути.
         </p>
 
         <div class="audience-grid">
           <article class="audience-card">
-            <h3>For teenagers</h3>
+            <h3 data-en="For teenagers">Подросткам</h3>
             <ul>
-              <li>Explore interests without choosing a lifelong path</li>
-              <li>Try tasks beyond the school curriculum</li>
-              <li>Ask professionals your own questions</li>
-              <li>Discover what you would like to explore next</li>
+              <li
+                data-en="Explore interests without choosing a lifelong path"
+              >
+                Исследуй свои интересы, не выбирая путь на всю жизнь
+              </li>
+              <li data-en="Try tasks beyond the school curriculum">
+                Пробуй задания за рамками школьной программы
+              </li>
+              <li data-en="Ask professionals your own questions">
+                Задавай профессионалам собственные вопросы
+              </li>
+              <li data-en="Discover what you would like to explore next">
+                Находи то, что хочется изучить дальше
+              </li>
             </ul>
           </article>
 
           <article class="audience-card">
-            <h3>For parents</h3>
+            <h3 data-en="For parents">Родителям</h3>
             <ul>
-              <li>Support your teenager’s growing independence</li>
-              <li>Give future study choices a practical starting point</li>
-              <li>Discuss interests through experience, not assumptions</li>
-              <li>Make space for a thoughtful next step</li>
+              <li data-en="Support your teenager’s growing independence">
+                Поддерживайте растущую самостоятельность подростка
+              </li>
+              <li
+                data-en="Give future study choices a practical starting point"
+              >
+                Помогайте выбирать дальнейшее обучение
+                на основе практического опыта
+              </li>
+              <li
+                data-en="Discuss interests through experience, not assumptions"
+              >
+                Обсуждайте интересы, опираясь на опыт,
+                а не на предположения
+              </li>
+              <li data-en="Make space for a thoughtful next step">
+                Давайте время и пространство
+                для осознанного следующего шага
+              </li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Enquiry form -->
+    <!-- Форма обращения -->
     <section
       class="signup-section"
       id="signup"
@@ -1182,27 +1367,39 @@
       <div class="container">
         <div class="signup-wrapper">
           <div class="signup-text">
-            <span class="eyebrow">Start with a conversation</span>
+            <span
+              class="eyebrow"
+              data-en="Start with a conversation"
+            >Начнём с разговора</span>
 
-            <h2 id="signup-title">
-              Let’s find a starting point
+            <h2
+              id="signup-title"
+              data-en="Let’s find a starting point"
+            >
+              Давайте найдём, с чего начать
             </h2>
 
-            <p>
-              Share a few details, and we’ll help you explore the
-              options and discuss the next steps.
+            <p
+              data-en="Share a few details, and we’ll help you explore the options and discuss the next steps."
+            >
+              Расскажите немного о себе, и мы поможем разобраться
+              в вариантах и обсудить следующие шаги.
             </p>
 
-            <p class="signup-small">
-              Not sure which area to choose? That is a perfectly
-              good place to begin.
+            <p
+              class="signup-small"
+              data-en="Not sure which area to choose? That is a perfectly good place to begin."
+            >
+              Пока не знаете, какое направление выбрать?
+              С этого тоже можно начать.
             </p>
           </div>
 
           <!--
-            Demo form only.
-            Connect a secure submission endpoint and add your
-            privacy information before collecting enquiries.
+            Это демонстрационная форма.
+            Прежде чем собирать обращения, подключите защищённый
+            обработчик отправки и добавьте информацию
+            об обработке персональных данных.
           -->
           <form
             class="signup-form"
@@ -1211,41 +1408,64 @@
           >
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Your name</label>
+                <label for="name" data-en="Your name">Ваше имя</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   autocomplete="name"
-                  placeholder="Your name"
+                  placeholder="Ваше имя"
+                  data-en-placeholder="Your name"
                   required
                 >
               </div>
 
               <div class="form-group">
-                <label for="role">I am a</label>
+                <label for="role" data-en="I am a">Кто вы?</label>
                 <select id="role" name="role" required>
-                  <option value="">Please select</option>
-                  <option value="parent">Parent or guardian</option>
-                  <option value="student">Student</option>
+                  <option value="" data-en="Please select">
+                    Выберите вариант
+                  </option>
+                  <option value="parent" data-en="Parent or guardian">
+                    Родитель или опекун
+                  </option>
+                  <option value="student" data-en="Student">
+                    Учащийся
+                  </option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="path">Area of interest</label>
+              <label for="path" data-en="Area of interest">
+                Интересующее направление
+              </label>
               <select id="path" name="path" required>
-                <option value="">Choose an area</option>
-                <option value="technology">Technology</option>
-                <option value="engineering">Engineering</option>
-                <option value="design">Design</option>
-                <option value="marketing">Marketing</option>
-                <option value="help">I would like help choosing</option>
+                <option value="" data-en="Choose an area">
+                  Выберите направление
+                </option>
+                <option value="technology" data-en="Technology">
+                  Технологии
+                </option>
+                <option value="engineering" data-en="Engineering">
+                  Инженерия
+                </option>
+                <option value="design" data-en="Design">
+                  Дизайн
+                </option>
+                <option value="marketing" data-en="Marketing">
+                  Маркетинг
+                </option>
+                <option value="help" data-en="I would like help choosing">
+                  Нужна помощь с выбором
+                </option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="email">Email address</label>
+              <label for="email" data-en="Email address">
+                Электронная почта
+              </label>
               <input
                 type="email"
                 id="email"
@@ -1256,12 +1476,21 @@
               >
             </div>
 
-            <button type="submit" class="btn btn-primary">
-              Preview enquiry
+            <button
+              type="submit"
+              class="btn btn-primary"
+              data-en="Preview enquiry"
+            >
+              Предпросмотр заявки
             </button>
 
-            <p class="form-note" id="form-note">
-              Demo form: no details will be sent or stored.
+            <p
+              class="form-note"
+              id="form-note"
+              data-en="Demo form: no details will be sent or stored."
+            >
+              Демонстрационная форма: данные не отправляются
+              и не сохраняются.
             </p>
 
             <p
@@ -1276,7 +1505,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- Частые вопросы -->
     <section
       class="faq-section"
       id="faq"
@@ -1285,59 +1514,93 @@
       <div class="container">
         <div class="faq-wrapper">
           <div class="faq-heading">
-            <span class="eyebrow">A few useful details</span>
+            <span
+              class="eyebrow"
+              data-en="A few useful details"
+            >Несколько полезных подробностей</span>
 
-            <h2 class="section-title" id="faq-title">
-              Questions, answered
+            <h2
+              class="section-title"
+              id="faq-title"
+              data-en="Questions, answered"
+            >
+              Ответы на частые вопросы
             </h2>
 
-            <p class="section-subtitle">
-              A little more about getting started.
+            <p
+              class="section-subtitle"
+              data-en="A little more about getting started."
+            >
+              Ещё немного о том, как начать.
             </p>
           </div>
 
           <details>
-            <summary>Does my teenager need previous experience?</summary>
-            <p>
-              No previous experience is needed to get started.
-              The professional introduces the task and guides
-              participants through the process.
+            <summary
+              data-en="Does my teenager need previous experience?"
+            >
+              Нужен ли подростку предварительный опыт?
+            </summary>
+            <p
+              data-en="No previous experience is needed to get started. The professional introduces the task and guides participants through the process."
+            >
+              Для начала предварительный опыт не нужен.
+              Специалист объясняет задание и помогает
+              участникам на всех этапах работы.
             </p>
           </details>
 
           <details>
-            <summary>What if the field is not the right fit?</summary>
-            <p>
-              That is a useful discovery too. The aim is to explore,
-              not to commit. Reflecting on what did not appeal can
-              help shape the next experience.
+            <summary data-en="What if the field is not the right fit?">
+              Что, если направление не подойдёт?
+            </summary>
+            <p
+              data-en="That is a useful discovery too. The aim is to explore, not to commit. Reflecting on what did not appeal can help shape the next experience."
+            >
+              Это тоже полезное открытие. Цель — попробовать,
+              а не сделать окончательный выбор. Понимание того,
+              что не понравилось, поможет решить,
+              что попробовать в следующий раз.
             </p>
           </details>
 
           <details>
-            <summary>What are the fees and program duration?</summary>
-            <p>
-              Fees and duration depend on the program. Request
-              the current details so you can review the format,
-              schedule, and cost before making a decision.
+            <summary data-en="What are the fees and program duration?">
+              Сколько стоит программа и как долго она длится?
+            </summary>
+            <p
+              data-en="Fees and duration depend on the program. Request the current details so you can review the format, schedule, and cost before making a decision."
+            >
+              Стоимость и продолжительность зависят от программы.
+              Запросите актуальную информацию, чтобы ознакомиться
+              с форматом, расписанием и ценой перед принятием решения.
             </p>
           </details>
 
           <details>
-            <summary>Who guides the sessions?</summary>
-            <p>
-              Industry professionals introduce their fields,
-              explain practical tasks, and share feedback
-              on participants’ work.
+            <summary data-en="Who guides the sessions?">
+              Кто проводит занятия?
+            </summary>
+            <p
+              data-en="Industry professionals introduce their fields, explain practical tasks, and share feedback on participants’ work."
+            >
+              Практикующие специалисты знакомят участников
+              со своими профессиональными сферами, объясняют
+              практические задания и дают обратную связь
+              по выполненной работе.
             </p>
           </details>
 
           <details>
-            <summary>Can we ask for help choosing a program?</summary>
-            <p>
-              Yes. Select “I would like help choosing” when making
-              an enquiry. You do not need to arrive with a fixed
-              career goal.
+            <summary data-en="Can we ask for help choosing a program?">
+              Можно ли получить помощь с выбором программы?
+            </summary>
+            <p
+              data-en="Yes. Select “I would like help choosing” when making an enquiry. You do not need to arrive with a fixed career goal."
+            >
+              Да. При заполнении заявки выберите «Нужна помощь
+              с выбором». Необязательно заранее знать,
+              какую профессию вы хотите выбрать.
             </p>
           </details>
         </div>
@@ -1350,39 +1613,180 @@
       <div class="footer-top">
         <div>
           <a href="#" class="logo">Future Career Lab</a>
-          <p class="footer-description">
-            Helping teenagers explore possibilities through
-            practical experiences and thoughtful guidance.
+          <p
+            class="footer-description"
+            data-en="Helping teenagers explore possibilities through practical experiences and thoughtful guidance."
+          >
+            Помогаем подросткам открывать новые возможности
+            через практический опыт и внимательную поддержку.
           </p>
         </div>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#programs">Programs</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#experts">Our approach</a>
-          <a href="#faq">FAQ</a>
+        <nav
+          class="footer-nav"
+          aria-label="Навигация в подвале сайта"
+          data-en-aria-label="Footer navigation"
+        >
+          <a href="#programs" data-en="Programs">Программы</a>
+          <a href="#how-it-works" data-en="How it works">
+            Как это работает
+          </a>
+          <a href="#experts" data-en="Our approach">Наш подход</a>
+          <a href="#faq" data-en="FAQ">Вопросы</a>
         </nav>
       </div>
 
-      <div class="footer-bottom">
-        &copy; 2026 Future Career Lab. All rights reserved.
+      <div
+        class="footer-bottom"
+        data-en="© 2026 Future Career Lab. All rights reserved."
+      >
+        &copy; 2026 Future Career Lab. Все права защищены.
       </div>
     </div>
   </footer>
 
   <script>
+    const languageButton = document.getElementById("languageButton");
     const menuButton = document.getElementById("menuButton");
     const mainNavigation = document.getElementById("mainNavigation");
-    const mobileQuery = window.matchMedia("(max-width: 768px)");
+    const enquiryForm = document.getElementById("enquiryForm");
+    const formStatus = document.getElementById("formStatus");
+    const descriptionMeta = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    const mobileQuery = window.matchMedia("(max-width: 900px)");
+    const storageKey = "futureCareerLabLanguage";
+
+    let currentLanguage = "ru";
+
+    const messages = {
+      ru: {
+        title: "Future Career Lab — Найди своё направление",
+        description:
+          "Практическое знакомство с профессиями для подростков. " +
+          "Изучайте разные сферы, учитесь у профессионалов и делайте " +
+          "следующий шаг с большей уверенностью.",
+        openMenu: "Открыть меню",
+        closeMenu: "Закрыть меню",
+        switchLanguage: "Switch to English",
+        demo:
+          "Это демонстрационная форма. Ваша заявка не отправлена, " +
+          "а данные не сохранены. Перед публикацией сайта " +
+          "подключите форму к сервису обработки заявок."
+      },
+      en: {
+        title: "Future Career Lab — Explore Your Direction",
+        description:
+          "Practical career experiences for teenagers. Explore " +
+          "different fields, learn from professionals, and take " +
+          "your next step with more confidence.",
+        openMenu: "Open navigation",
+        closeMenu: "Close navigation",
+        switchLanguage: "Переключить на русский",
+        demo:
+          "This is a demonstration only. Your enquiry has not been " +
+          "sent, and your details have not been stored. Connect the " +
+          "form to a submission service before publishing."
+      }
+    };
+
+    // Каждый data-en находится на элементе только с текстом.
+    // Исходный русский текст сохраняем до первого переключения.
+    const textBindings = Array.from(
+      document.querySelectorAll("[data-en]"),
+      (element) => ({
+        element,
+        ru: element.textContent,
+        en: element.getAttribute("data-en")
+      })
+    );
+
+    const attributeBindings = [];
+
+    [
+      ["aria-label", "data-en-aria-label"],
+      ["alt", "data-en-alt"],
+      ["placeholder", "data-en-placeholder"]
+    ].forEach(([attribute, translationAttribute]) => {
+      document
+        .querySelectorAll(`[${translationAttribute}]`)
+        .forEach((element) => {
+          attributeBindings.push({
+            element,
+            attribute,
+            ru: element.getAttribute(attribute),
+            en: element.getAttribute(translationAttribute)
+          });
+        });
+    });
+
+    function updateMenuLabel() {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen
+          ? messages[currentLanguage].closeMenu
+          : messages[currentLanguage].openMenu
+      );
+    }
 
     function setMenuOpen(isOpen) {
       mainNavigation.classList.toggle("is-open", isOpen);
       menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
+      updateMenuLabel();
     }
+
+    function setLanguage(language, persist = true) {
+      currentLanguage = language === "en" ? "en" : "ru";
+
+      document.documentElement.lang = currentLanguage;
+      document.title = messages[currentLanguage].title;
+      descriptionMeta.setAttribute(
+        "content",
+        messages[currentLanguage].description
+      );
+
+      textBindings.forEach((binding) => {
+        binding.element.textContent = binding[currentLanguage];
+      });
+
+      attributeBindings.forEach((binding) => {
+        binding.element.setAttribute(
+          binding.attribute,
+          binding[currentLanguage]
+        );
+      });
+
+      const nextLanguage = currentLanguage === "ru" ? "en" : "ru";
+
+      languageButton.textContent = nextLanguage.toUpperCase();
+      languageButton.lang = nextLanguage;
+      languageButton.setAttribute(
+        "aria-label",
+        messages[currentLanguage].switchLanguage
+      );
+
+      updateMenuLabel();
+
+      if (!formStatus.hidden) {
+        formStatus.textContent = messages[currentLanguage].demo;
+      }
+
+      if (persist) {
+        try {
+          localStorage.setItem(storageKey, currentLanguage);
+        } catch {
+          // Сайт работает и при недоступном хранилище.
+        }
+      }
+    }
+
+    languageButton.addEventListener("click", () => {
+      setLanguage(currentLanguage === "ru" ? "en" : "ru");
+    });
 
     menuButton.addEventListener("click", () => {
       const isOpen =
@@ -1420,18 +1824,26 @@
       setMenuOpen(false);
     });
 
-    const enquiryForm = document.getElementById("enquiryForm");
-    const formStatus = document.getElementById("formStatus");
-
     enquiryForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
       formStatus.hidden = false;
-      formStatus.textContent =
-        "This is a demonstration only. Your enquiry has not been " +
-        "sent, and your details have not been stored. Connect the " +
-        "form to a submission service before publishing.";
+      formStatus.textContent = messages[currentLanguage].demo;
     });
+
+    let initialLanguage = "ru";
+
+    try {
+      const savedLanguage = localStorage.getItem(storageKey);
+
+      if (savedLanguage === "ru" || savedLanguage === "en") {
+        initialLanguage = savedLanguage;
+      }
+    } catch {
+      // Если хранилище недоступно, используем русский язык.
+    }
+
+    setLanguage(initialLanguage, false);
   </script>
 </body>
 </html>
