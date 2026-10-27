@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Future Career Lab — Explore Your Direction</title>
+  <meta
+    name="description"
+    content="Practical career experiences for teenagers. Explore different fields, learn from professionals, and take your next step with more confidence."
+  >
+  <meta name="theme-color" content="#fffdfa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --background: #fffdfa;
+      --white: #ffffff;
+      --peach: #faf1ec;
+      --sand: #f7eee6;
+      --soft: #f8f7f3;
+      --blue-light: #edf2f4;
+      --sage-light: #f2f5f4;
+      --primary: #365f91;
+      --primary-hover: #294c77;
+      --text: #283342;
+      --muted: #626c77;
+      --border: #e9e4de;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+      --shadow: 0 10px 32px rgba(42, 49, 58, 0.045);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    button, summary {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 5px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .container {
+      width: min(100%, 1160px);
+      margin-inline: auto;
+      padding-inline: 28px;
+    }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 200;
+      padding: 10px 16px;
+      background: var(--white);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 22px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      font-size: 0.925rem;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align: center;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.65);
+      border-color: #d9dedf;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      border-color: var(--primary);
+    }
+
+    /* Header */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 19px 0;
+      background: rgba(255, 253, 250, 0.96);
+      border-bottom: 1px solid rgba(233, 228, 222, 0.7);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a:not(.btn) {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links .btn:hover {
+      color: var(--white);
+    }
+
+    .menu-button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 20px;
+    }
+
+    .menu-icon span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: var(--text);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 76px 0 88px;
+      background: linear-gradient(
+        115deg,
+        #fffdfa 0%,
+        #fcf5ef 62%,
+        #faeee8 100%
+      );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin-bottom: 24px;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      line-height: 1.12;
+      letter-spacing: -0.055em;
+    }
+
+    .hero-description {
+      max-width: 480px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.825rem;
+    }
+
+    .hero-image {
+      justify-self: center;
+      width: 100%;
+      max-width: 430px;
+      padding: 12px;
+      overflow: hidden;
+      background: #f9e2d9;
+      border-radius: 48% 48% 24px 24px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 44% 44% 18px 18px;
+    }
+
+    /* Subject strip */
+
+    .subject-strip {
+      padding: 21px 0;
+      background: #f7f5f1;
+      border-block: 1px solid var(--border);
+    }
+
+    .subject-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 36px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+    }
+
+    /* Shared sections */
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 16px;
+      font-size: clamp(1.9rem, 3vw, 2.65rem);
+      letter-spacing: -0.045em;
+    }
+
+    .section-subtitle {
+      max-width: 620px;
+      margin-bottom: 38px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    .card h3 {
+      margin-bottom: 13px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .card p,
+    .step-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .chip {
+      padding: 8px 16px;
+      background: #f8f5f1;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      color: #536171;
+      font-size: 0.85rem;
+    }
+
+    .chip-dashed {
+      background: transparent;
+      border-style: dashed;
+      border-color: #d8d3cb;
+      color: var(--muted);
+    }
+
+    /* How it works */
+
+    .how-section {
+      background: var(--soft);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step-card {
+      padding: 28px 24px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 24px;
+      background: #edf1f5;
+      border-radius: 50%;
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .step-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.075rem;
+      line-height: 1.4;
+    }
+
+    /* Professionals */
+
+    .experts-section {
+      padding-bottom: 0;
+    }
+
+    .experts-panel {
+      padding: 56px 48px;
+      background: var(--blue-light);
+      border: 1px solid #e1e8ec;
+      border-radius: var(--radius-lg);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 24px;
+      padding: 7px 12px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .experts-panel .section-subtitle {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px;
+      margin-top: 34px;
+    }
+
+    .expert-feature h3 {
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+
+    .expert-feature p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* Audience */
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .audience-card {
+      padding: 36px;
+      background: #faf6f1;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    .audience-card:nth-child(2) {
+      background: var(--sage-light);
+    }
+
+    .audience-card h3 {
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+    }
+
+    .audience-card ul {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .audience-card li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .audience-card li::before {
+      position: absolute;
+      left: 0;
+      content: "✓";
+      color: #698578;
+      font-weight: 500;
+    }
+
+    /* Enquiry */
+
+    .signup-section {
+      padding-top: 16px;
+    }
+
+    .signup-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .signup-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+      background: var(--sand);
+    }
+
+    .signup-text h2 {
+      margin-bottom: 24px;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      letter-spacing: -0.045em;
+    }
+
+    .signup-text p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .signup-text .signup-small {
+      margin-top: 22px;
+      font-size: 0.85rem;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 44px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      color: #505a65;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      min-width: 0;
+      min-height: 48px;
+      padding: 12px 14px;
+      background: var(--white);
+      border: 1px solid #dedfdb;
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(54, 95, 145, 0.1);
+    }
+
+    .form-note,
+    .form-status {
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .form-status {
+      padding: 12px 14px;
+      background: var(--blue-light);
+      border-radius: 10px;
+      color: var(--text);
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      background: var(--soft);
+    }
+
+    .faq-wrapper {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .faq-heading {
+      text-align: center;
+    }
+
+    .faq-heading .section-title,
+    .faq-heading .section-subtitle {
+      margin-inline: auto;
+    }
+
+    details {
+      border-bottom: 1px solid #e2e2db;
+    }
+
+    summary {
+      position: relative;
+      padding: 24px 40px 24px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      content: "+";
+      color: #6a7888;
+      font-size: 1.5rem;
+      font-weight: 400;
+      transform: translateY(-50%);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding: 0 40px 24px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 48px 0 28px;
+      background: #f1eee8;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .footer-description {
+      max-width: 340px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      border-top: 1px solid #dedbd4;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        text-align: center;
+      }
+
+      .hero h1,
+      .hero-description {
+        margin-inline: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image {
+        max-width: 360px;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+      .container {
+        padding-inline: 22px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .site-header {
+        padding: 12px 0;
+      }
+
+      .header-content {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 4px;
+        padding-top: 18px;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a:not(.btn) {
+        padding: 10px 0;
+      }
+
+      .nav-links .btn {
+        margin-top: 8px;
+      }
+
+      .hero {
+        padding: 48px 0 56px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.3rem, 9vw, 3.2rem);
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .hero-image {
+        max-width: 310px;
+      }
+
+      .subject-list {
+        gap: 12px 22px;
+        font-size: 0.75rem;
+      }
+
+      .grid-3,
+      .steps-grid,
+      .grid-2,
+      .audience-grid,
+      .signup-wrapper,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .audience-card {
+        padding: 28px;
+      }
+
+      .experts-panel {
+        padding: 32px 24px;
+        border-radius: 24px;
+      }
+
+      .grid-2 {
+        gap: 28px;
+      }
+
+      .signup-text,
+      .signup-form {
+        padding: 32px 24px;
+      }
+
+      .footer-nav {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .logo {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="logo" aria-label="Future Career Lab home">
+        Future Career Lab
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+      >
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav
+        class="nav-links"
+        id="mainNavigation"
+        aria-label="Main navigation"
+      >
+        <a href="#programs">Programs</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#experts">Our approach</a>
+        <a href="#faq">FAQ</a>
+        <a href="#signup" class="btn btn-primary">
+          Enquire
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow">
+            A thoughtful start to the future
+          </span>
+
+          <h1 id="hero-title">
+            Explore possibilities.<br>
+            Find your own direction.
+          </h1>
+
+          <p class="hero-description">
+            Practical career experiences for teenagers, guided by
+            industry professionals. Discover new interests, try
+            meaningful tasks, and take the next step with more confidence.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#programs" class="btn btn-primary">
+              Explore programs
+            </a>
+
+            <a href="#signup" class="btn btn-outline">
+              Ask about a trial
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Room to explore. No need to have it all figured out.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="src/person.png"
+            alt="Illustration of a young person holding a creative portfolio"
+            width="473"
+            height="477"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Career areas -->
+    <div class="subject-strip">
+      <div class="container">
+        <ul class="subject-list" aria-label="Career areas and learning approach">
+          <li>Technology</li>
+          <li>Engineering</li>
+          <li>Design</li>
+          <li>Marketing</li>
+          <li>Practical projects</li>
+          <li>Professional guidance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Programs -->
+    <section id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <span class="eyebrow">Explore through experience</span>
+
+        <h2 class="section-title" id="programs-title">
+          A little experience.<br>
+          A clearer direction.
+        </h2>
+
+        <p class="section-subtitle">
+          Explore different fields through practical tasks and discover
+          what you would like to learn more about.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Try a professional role</h3>
+            <p>
+              Move beyond job descriptions. Try practical tasks,
+              explore how a professional thinks, and see what
+              interests you along the way.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Make an informed choice</h3>
+            <p>
+              Give future study decisions a practical starting point.
+              Reflect on what you enjoyed, what challenged you,
+              and what you would like to explore next.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Discover different possibilities</h3>
+            <p>
+              Compare different ways of working, from technical
+              problem-solving to creative thinking. You do not
+              need to choose just one interest.
+            </p>
+          </article>
+        </div>
+
+        <ul class="chips" aria-label="Program fields">
+          <li class="chip">Technology</li>
+          <li class="chip">Engineering</li>
+          <li class="chip">Design</li>
+          <li class="chip">Marketing</li>
+          <li class="chip chip-dashed">More to explore</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section
+      class="how-section"
+      id="how-it-works"
+      aria-labelledby="how-title"
+    >
+      <div class="container">
+        <span class="eyebrow">One step at a time</span>
+
+        <h2 class="section-title" id="how-title">
+          A simple way to get started
+        </h2>
+
+        <p class="section-subtitle">
+          From choosing an area to reflecting on what you enjoyed—
+          one step at a time.
+        </p>
+
+        <ol class="steps-grid">
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Choose an area</h3>
+            <p>
+              Tell us what interests you, or ask for help
+              finding a starting point.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Meet a professional</h3>
+            <p>
+              Get an introduction to the field, the task,
+              and the thinking behind the work.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Try a practical task</h3>
+            <p>
+              Work through a challenge, ask questions,
+              and experiment with your own ideas.
+            </p>
+          </li>
+
+          <li class="step-card">
+            <span class="step-number" aria-hidden="true">4</span>
+            <h3>Reflect and explore</h3>
+            <p>
+              Discuss your experience, receive feedback,
+              and consider what to try next.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Professionals -->
+    <section
+      class="experts-section"
+      id="experts"
+      aria-labelledby="experts-title"
+    >
+      <div class="container">
+        <div class="experts-panel">
+          <span class="badge">Learning through experience</span>
+
+          <h2 class="section-title" id="experts-title">
+            Meet the people behind the professions
+          </h2>
+
+          <p class="section-subtitle">
+            Learn how professionals approach their work, ask questions,
+            and discover what a role looks like beyond the job title.
+          </p>
+
+          <div class="grid-2">
+            <article class="expert-feature">
+              <h3>Guidance from professionals</h3>
+              <p>
+                Learn from people working in their fields.
+                Hear about their everyday decisions, the skills
+                they use, and what they find rewarding.
+              </p>
+            </article>
+
+            <article class="expert-feature">
+              <h3>Practical challenges</h3>
+              <p>
+                Explore tasks connected to professional work.
+                Focus on the process: understanding a brief,
+                developing an idea, and explaining your choices.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Students and parents -->
+    <section aria-labelledby="audience-title">
+      <div class="container">
+        <span class="eyebrow">For teenagers and their families</span>
+
+        <h2 class="section-title" id="audience-title">
+          Space to explore. Support to move forward.
+        </h2>
+
+        <p class="section-subtitle">
+          A starting point for teenagers discovering their interests,
+          and parents who want to support the process.
+        </p>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <h3>For teenagers</h3>
+            <ul>
+              <li>Explore interests without choosing a lifelong path</li>
+              <li>Try tasks beyond the school curriculum</li>
+              <li>Ask professionals your own questions</li>
+              <li>Discover what you would like to explore next</li>
+            </ul>
+          </article>
+
+          <article class="audience-card">
+            <h3>For parents</h3>
+            <ul>
+              <li>Support your teenager’s growing independence</li>
+              <li>Give future study choices a practical starting point</li>
+              <li>Discuss interests through experience, not assumptions</li>
+              <li>Make space for a thoughtful next step</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiry form -->
+    <section
+      class="signup-section"
+      id="signup"
+      aria-labelledby="signup-title"
+    >
+      <div class="container">
+        <div class="signup-wrapper">
+          <div class="signup-text">
+            <span class="eyebrow">Start with a conversation</span>
+
+            <h2 id="signup-title">
+              Let’s find a starting point
+            </h2>
+
+            <p>
+              Share a few details, and we’ll help you explore the
+              options and discuss the next steps.
+            </p>
+
+            <p class="signup-small">
+              Not sure which area to choose? That is a perfectly
+              good place to begin.
+            </p>
+          </div>
+
+          <!--
+            Demo form only.
+            Connect a secure submission endpoint and add your
+            privacy information before collecting enquiries.
+          -->
+          <form
+            class="signup-form"
+            id="enquiryForm"
+            aria-describedby="form-note"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="role">I am a</label>
+                <select id="role" name="role" required>
+                  <option value="">Please select</option>
+                  <option value="parent">Parent or guardian</option>
+                  <option value="student">Student</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="path">Area of interest</label>
+              <select id="path" name="path" required>
+                <option value="">Choose an area</option>
+                <option value="technology">Technology</option>
+                <option value="engineering">Engineering</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>
+                <option value="help">I would like help choosing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Preview enquiry
+            </button>
+
+            <p class="form-note" id="form-note">
+              Demo form: no details will be sent or stored.
+            </p>
+
+            <p
+              class="form-status"
+              id="formStatus"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section
+      class="faq-section"
+      id="faq"
+      aria-labelledby="faq-title"
+    >
+      <div class="container">
+        <div class="faq-wrapper">
+          <div class="faq-heading">
+            <span class="eyebrow">A few useful details</span>
+
+            <h2 class="section-title" id="faq-title">
+              Questions, answered
+            </h2>
+
+            <p class="section-subtitle">
+              A little more about getting started.
+            </p>
+          </div>
+
+          <details>
+            <summary>Does my teenager need previous experience?</summary>
+            <p>
+              No previous experience is needed to get started.
+              The professional introduces the task and guides
+              participants through the process.
+            </p>
+          </details>
+
+          <details>
+            <summary>What if the field is not the right fit?</summary>
+            <p>
+              That is a useful discovery too. The aim is to explore,
+              not to commit. Reflecting on what did not appeal can
+              help shape the next experience.
+            </p>
+          </details>
+
+          <details>
+            <summary>What are the fees and program duration?</summary>
+            <p>
+              Fees and duration depend on the program. Request
+              the current details so you can review the format,
+              schedule, and cost before making a decision.
+            </p>
+          </details>
+
+          <details>
+            <summary>Who guides the sessions?</summary>
+            <p>
+              Industry professionals introduce their fields,
+              explain practical tasks, and share feedback
+              on participants’ work.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can we ask for help choosing a program?</summary>
+            <p>
+              Yes. Select “I would like help choosing” when making
+              an enquiry. You do not need to arrive with a fixed
+              career goal.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="logo">Future Career Lab</a>
+          <p class="footer-description">
+            Helping teenagers explore possibilities through
+            practical experiences and thoughtful guidance.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#programs">Programs</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#experts">Our approach</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2026 Future Career Lab. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mainNavigation = document.getElementById("mainNavigation");
+    const mobileQuery = window.matchMedia("(max-width: 768px)");
+
+    function setMenuOpen(isOpen) {
+      mainNavigation.classList.toggle("is-open", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      setMenuOpen(!isOpen);
+    });
+
+    mainNavigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        setMenuOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menuButton.getAttribute("aria-expanded") === "true"
+      ) {
+        setMenuOpen(false);
+        menuButton.focus();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (
+        !mainNavigation.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    });
+
+    mobileQuery.addEventListener("change", () => {
+      setMenuOpen(false);
+    });
+
+    const enquiryForm = document.getElementById("enquiryForm");
+    const formStatus = document.getElementById("formStatus");
+
+    enquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      formStatus.hidden = false;
+      formStatus.textContent =
+        "This is a demonstration only. Your enquiry has not been " +
+        "sent, and your details have not been stored. Connect the " +
+        "form to a submission service before publishing.";
+    });
+  </script>
+</body>
+</html>
