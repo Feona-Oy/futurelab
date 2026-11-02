@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Future Career Lab — Найди своё направление</title>
+  <title>TriaLab: Explore Your Direction</title>
   <meta
     name="description"
-    content="Практическое знакомство с профессиями для подростков. Изучайте разные сферы, учитесь у профессионалов и делайте следующий шаг с большей уверенностью."
+    content="Hands-on career discovery for teenagers. Explore professional fields, learn from experts and build confidence through real-world experiences."
   >
   <meta name="theme-color" content="#fffdfa">
 
@@ -179,15 +179,16 @@
       gap: 20px;
     }
 
-    .logo {
-      font-size: 1.05rem;
-      font-weight: 600;
-      letter-spacing: -0.4px;
-      white-space: nowrap;
+    .header-content > .brand-lockup {
+      margin-right: auto;
+      display: flex;
+      align-items: center;
     }
 
-    .header-content > .logo {
-      margin-right: auto;
+    .brand-logo {
+      height: 42px; /* Adjust height to fit the header nicely */
+      width: auto;
+      object-fit: contain;
     }
 
     .language-button {
@@ -723,6 +724,11 @@
       margin-bottom: 36px;
     }
 
+    .footer-brand .brand-logo {
+      height: 48px;
+      margin-bottom: 14px;
+    }
+
     .footer-description {
       max-width: 340px;
       margin-top: 14px;
@@ -903,8 +909,8 @@
         width: 100%;
       }
 
-      .logo {
-        font-size: 0.95rem;
+      .brand-logo {
+        height: 36px;
       }
     }
 
@@ -932,13 +938,8 @@
 
   <header class="site-header">
     <div class="container header-content">
-      <a
-        href="#"
-        class="logo"
-        aria-label="Future Career Lab — главная"
-        data-en-aria-label="Future Career Lab home"
-      >
-        Future Career Lab
+      <a href="#" class="brand-lockup" aria-label="TriaLab home" data-en-aria-label="TriaLab home">
+        <img src="./src/TriaLab-Logo.png" alt="TriaLab: Explore, Learn, Choose" class="brand-logo">
       </a>
 
       <button
@@ -992,17 +993,17 @@
         <div class="hero-text">
           <span
             class="eyebrow"
-            data-en="A thoughtful start to the future"
+            data-en="Discover what could be next"
           >Осознанный шаг в будущее</span>
 
           <h1 id="hero-title">
-            <span data-en="Explore possibilities.">Открой возможности.</span><br>
-            <span data-en="Find your own direction.">Найди своё направление.</span>
+            <span data-en="Explore real possibilities.">Открой возможности.</span><br>
+            <span data-en="Find your direction.">Найди своё направление.</span>
           </h1>
 
           <p
             class="hero-description"
-            data-en="Practical career experiences for teenagers, guided by industry professionals. Discover new interests, try meaningful tasks, and take the next step with more confidence."
+            data-en="A hands-on career discovery accelerator for teenagers. Explore professional fields, work on real-world challenges, and learn directly from industry experts."
           >
             Практическое знакомство с профессиями для подростков
             под руководством специалистов. Открывай новые интересы,
@@ -1026,7 +1027,7 @@
 
           <p
             class="hero-note"
-            data-en="Room to explore. No need to have it all figured out."
+            data-en="Try something new. Discover what inspires you."
           >
             Здесь можно пробовать. Необязательно знать все ответы заранее.
           </p>
@@ -1068,7 +1069,7 @@
       <div class="container">
         <span
           class="eyebrow"
-          data-en="Explore through experience"
+          data-en="Career discovery through experience"
         >Познавай через опыт</span>
 
         <h2 class="section-title" id="programs-title">
@@ -1078,7 +1079,7 @@
 
         <p
           class="section-subtitle"
-          data-en="Explore different fields through practical tasks and discover what you would like to learn more about."
+          data-en="Explore professional fields through practical challenges, meet people who work in them, and discover what interests you."
         >
           Знакомься с разными сферами через практические задания
           и находи то, о чём хочется узнать больше.
@@ -1539,7 +1540,7 @@
             <summary
               data-en="Does my teenager need previous experience?"
             >
-              Нужен ли подростку предварительный опыт?
+              Нужны ли специальные навыки или опыт?
             </summary>
             <p
               data-en="No previous experience is needed to get started. The professional introduces the task and guides participants through the process."
@@ -1612,10 +1613,12 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <a href="#" class="logo">Future Career Lab</a>
+          <a href="#" class="brand-lockup footer-brand" aria-label="TriaLab home" data-en-aria-label="TriaLab home">
+            <img src="src/TriaLab-Logo.png" alt="TriaLab: Explore, Learn, Choose" class="brand-logo">
+          </a>
           <p
             class="footer-description"
-            data-en="Helping teenagers explore possibilities through practical experiences and thoughtful guidance."
+            data-en="A hands-on career discovery accelerator helping teenagers explore professional fields, learn from experts, and find their direction."
           >
             Помогаем подросткам открывать новые возможности
             через практический опыт и внимательную поддержку.
@@ -1638,9 +1641,9 @@
 
       <div
         class="footer-bottom"
-        data-en="© 2026 Future Career Lab. All rights reserved."
+        data-en="© 2026 TriaLab. All rights reserved."
       >
-        &copy; 2026 Future Career Lab. Все права защищены.
+        &copy; 2026 TriaLab. Все права защищены.
       </div>
     </div>
   </footer>
@@ -1662,7 +1665,7 @@
 
     const messages = {
       ru: {
-        title: "Future Career Lab — Найди своё направление",
+        title: "TriaLab — Найди своё направление",
         description:
           "Практическое знакомство с профессиями для подростков. " +
           "Изучайте разные сферы, учитесь у профессионалов и делайте " +
@@ -1676,7 +1679,7 @@
           "подключите форму к сервису обработки заявок."
       },
       en: {
-        title: "Future Career Lab — Explore Your Direction",
+        title: "TriaLab — Explore Your Direction",
         description:
           "Practical career experiences for teenagers. Explore " +
           "different fields, learn from professionals, and take " +
